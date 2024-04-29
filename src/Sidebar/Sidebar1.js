@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Sidebar1.css'
-import 'boxicons'
+import "boxicons"
 import logo from '../Assets/IMG_20230313_184151_059.jpg'
 import logo1 from '../Assets/Screenshot 2023-10-04 150807.png'
 function Sidebar1() {
