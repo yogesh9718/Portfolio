@@ -6,10 +6,20 @@ import logo1 from '../Assets/Screenshot 2023-10-04 150807.png'
 function Sidebar1() {
 
   const [isOpen, setIsopen] = useState(false)
+  const [data,setData]= useState({
+            name:"",
+            email:"",
+            number:"",
+            note:""
+  })
   function navbar() {
     setIsopen(!isOpen)
   }
-
+  function datafetch(e){
+      e.preventDefault()
+      console.log(data);
+      
+  }
 
 
   return (
@@ -41,9 +51,8 @@ function Sidebar1() {
           </div>
           <div className='sidebar-item1'>
             <a href='#'><box-icon name='facebook' className="face" type='logo' ></box-icon></a>
-            <a href='#'><box-icon name='instagram' type='logo' ></box-icon></a>
-            <a href='#'><box-icon name='whatsapp' type='logo' ></box-icon></a>
-            <a href='#'><box-icon name='gmail' type='logo' ></box-icon></a>
+            <a href='https://www.instagram.com/yash_rajput989'><box-icon name='instagram' type='logo' ></box-icon></a>
+            <a href=' https://wa.me/9718446654'><box-icon name='whatsapp' type='logo' ></box-icon></a>
           </div>
         </div>
         <div className='sidebar1'>
@@ -117,6 +126,39 @@ function Sidebar1() {
             <h2>Mongodb</h2>
           </div>
         </div>
+      </div>
+      <div className='sidenav-main'>
+        <h1>Enquiry Page</h1>
+      </div>
+      <div className='sidenav-main'>
+        <div className='footer'>
+          <div className='service'>
+            <p>
+              <b>Welcome</b> to our enquiry page! As a seasoned web developer, I'm here to assist you with any questions or concerns you may have regarding our services or projects. Whether you're curious about our web development process, need clarification on specific technical aspects, or have inquiries about ongoing projects, I'm here to provide you with prompt and knowledgeable support. Feel free to reach out to me via this enquiry form, and I'll get back to you as soon as possible. Your satisfaction and understanding are paramount to us, and I'm committed to ensuring that your experience with our web development services is seamless and satisfying. Thank you for considering us for your web development needs, and I look forward to assisting you!
+            </p>
+          </div>
+        </div>
+        <div className='footer'>
+          <div className='service'>
+            <form onSubmit={datafetch}>
+              <h2>   <label>Name : </label>
+                <input type='text' onChange={(e)=>{setData({...data,name:e.target.value})}} name="name" value={data.name} placeholder='Name' /></h2>
+              <h2>   <label>Email : </label>
+                <input type='email' onChange={(e)=>{setData({...data,email:e.target.value})}} name="email" value={data.email} placeholder='email'  /></h2>
+              <h2>
+                <label>Contact No. : </label>
+                <input type='text' onChange={(e)=>{setData({...data,number:e.target.value})}} name="number" value={data.number} placeholder='number' /> 
+              </h2>
+              <h2>
+                <label>Note : </label>
+                <input type='textarea' onChange={(e)=>{setData({...data,note:e.target.value})}} name="note" value={data.note}  placeholder='write as your enquiry' />
+              </h2>
+              <button type='submit'> Submit</button>
+            </form>
+          </div>
+
+        </div>
+
       </div>
       {/* <div className='sidenav-main'>
          <div className='sidebar'>

@@ -247,7 +247,11 @@
 .service {
   padding: 1%;
   /* border: 1px solid black; */
-  box-shadow: 1px 1px 20px #012290f7
+  box-shadow: 1px 1px 20px #012290f7;
+}
+.service p{
+  padding: 2%;
+  text-align:justify;
 }
 
 .service:hover {
@@ -322,7 +326,11 @@
     width: 100%;
     height: auto;
   }
+  .sidebar-item {
+    padding: 3%;
+    margin-left: 0%;
 
+  }
   .sidebar1 {
     width: 100%;
     height: auto !important;
