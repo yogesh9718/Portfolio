@@ -14,6 +14,7 @@
   text-align: center;
   background-color: #0a1d29;
   color: white;
+  margin-top: -4px;
 }
 
 .sidenav-main h1 {
@@ -34,7 +35,7 @@
   height: auto;
   border: 2px solid black;
   background-color: #071028;
-
+  position: fixed;
   /* background-color: #123f59; */
 }
 
@@ -57,6 +58,8 @@
   border: 2px solid black;
   background-color: #071028;
   /* background-color: #123f59; */
+  position: fixed;
+  margin-left: 20%;
 }
 
 .navbar1 a {
@@ -92,8 +95,10 @@
 }
 
 .sidebar-item1 {
-  height: 50px;
+  height: 40px;
+  width: 140px;
   margin-left: 30%;
+  
   /* border: 2px solid black; */
   display: flex;
 }
@@ -105,33 +110,43 @@
   display: flex;
 }
 
-.sidebar-item2 a {
-  /* border: 2px solid black; */
+/* .sidebar-item2 a {
+  border: 2px solid black;
   padding: 2% !important;
   background-color: cyan;
   color: black !important;
   text-decoration: none;
   box-shadow: 0 0 5px cyan;
   border-radius: 40px;
-}
+} */
 
-.sidebar-item2 a:hover {
+/* .sidebar-item2 a:hover {
   box-shadow: 0 0 5px cyan,
     0 0 25px cyan,
     0 0 50px cyan,
     0 0 100px cyan;
-}
+} */
 
 .sidebar-item1 a {
   /* border: 2px solid black; */
-  padding: 2% !important;
-  background-color: white;
+  padding-left: 4% !important;
+  margin-left: 10%;
+  background-color: #0053b8;
   color: white !important;
+  transition: transform .9s;
 }
 
+.sidebar-item1 a:hover{
+  box-shadow:  0px 0px 5px aqua,
+   0 0 25px aqua,
+  0 0 50px aqua;
+  transform: scale(1.2);
+  /* 0 0 100px #0053b8; */
+}
 /* .sidebar label{
     color: ;
 } */
+
 
 .sidebar a {
   display: block;
@@ -253,12 +268,52 @@
   padding: 2%;
   text-align:justify;
 }
+.link b{
+ margin-left: 25%;
+}
 
 .service:hover {
   box-shadow: 0 0 5px #0053b8,
     0 0 25px #0053b8,
     0 0 50px #0053b8,
     0 0 100px #0053b8;
+}
+.form h2{
+  margin-top: 0%;
+    margin-left: 4%;
+}
+.form input{
+     border: 2px solid black;
+     width: 200px;
+     height: 25px;
+}
+.form input:hover{
+  border: 3px solid  #0053b8;
+  box-shadow: 5px 5px 10px 5px #0053b8,
+  0 0 25px #0053b8,
+  0 0 50px #0053b8,
+  0 0 100px #0053b8;
+}
+.form input::placeholder{
+  border: none;
+  text-indent: 8px;
+}
+.btn{
+  width: 150px;
+ height: 45px;
+ font-size: 16px;
+ border: none;
+  background-color: cyan;
+  color: black !important;
+  text-decoration: none;
+  box-shadow: 0 0 5px cyan;
+  border-radius: 40px;
+}
+.btn:hover{
+  box-shadow: 0 0 5px cyan,
+  0 0 25px cyan,
+  0 0 50px cyan,
+  0 0 100px cyan;
 }
 
 @media (max-width: 768px) {
@@ -280,6 +335,7 @@
     width: 100%;
     height: auto;
     display: flex;
+    position: relative;
   }
 
   .navbar button {
@@ -361,6 +417,10 @@
 
   .sidenav-main h1 {
     margin-left: 10%;
+  }
+  .link b{
+    
+    margin-left: 3%;
   }
 
   .dp-img {

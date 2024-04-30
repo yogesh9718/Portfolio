@@ -30,15 +30,15 @@ function Sidebar1() {
           <button id='hamburger' onClick={navbar} className="hamburger"><box-icon name='menu'></box-icon></button>
         </div>
         <div className={isOpen ? "isOpenMenu" : "navbar1"}>
-          <a href='#'>Home</a>
-          <a href='#'>About</a>
-          <a href='#'>Project</a>
-          <a href='#'>Skills</a>
-          <a href='#'>Project</a>
-          <a href='#'>Contact</a>
+          <a href='#home'>Home</a>
+          <a href='#about'>About</a>
+          <a href='#project'>Project</a>
+          <a href='#skills'>Skills</a>
+          <a href='#'>Resume</a>
+          <a href='#contact'>Contact</a>
         </div>
       </div>
-      <div className='sidenav-main1'>
+      <div id='home' className='sidenav-main1'>
         <div className='sidebar'>
           <div className='sidebar-item'>
 
@@ -69,7 +69,7 @@ function Sidebar1() {
           </div>
 
         </div>
-        <div className='sidebar4'>
+        <div id='about' className='sidebar4'>
           <div className='sidebar-item'>
 
             <h1>About Me</h1>
@@ -80,19 +80,19 @@ function Sidebar1() {
             </p>
           </div>
           <div className='sidebar-item2'>
-            <a href='#'><box name='btn-box' type='logo' >More About Me</box></a>
+            <a href='#'><button className='btn' >More About Me</button></a>
           </div>
         </div>
 
       </div>
-      <div className='sidenav-main'>
+      <div id='project' className='sidenav-main'>
         <h1>My Projects</h1>
       </div>
       <div className='sidenav-main'>
         <div className='footer'>
           <div className='service'>
             <h2>Ecommerce website</h2>
-            <p>
+            <p className='link'>
               <b>Link:</b>  <a href='https://website-virid-eight-66.vercel.app/'>https://website-virid-eight-66.vercel.app/</a>
             </p>
           </div>
@@ -106,7 +106,7 @@ function Sidebar1() {
           </div>
         </div>
       </div>
-      <div className='sidenav-main'>
+      <div id='skills' className='sidenav-main'>
         <h1>My Skills</h1>
       </div>
       <div className='sidenav-main'>
@@ -138,22 +138,22 @@ function Sidebar1() {
             </p>
           </div>
         </div>
-        <div className='footer'>
+        <div id='contact' className='footer'>
           <div className='service'>
-            <form onSubmit={datafetch}>
+            <form className='form' onSubmit={datafetch}>
               <h2>   <label>Name : </label>
                 <input type='text' onChange={(e)=>{setData({...data,name:e.target.value})}} name="name" value={data.name} placeholder='Name' /></h2>
               <h2>   <label>Email : </label>
                 <input type='email' onChange={(e)=>{setData({...data,email:e.target.value})}} name="email" value={data.email} placeholder='email'  /></h2>
               <h2>
-                <label>Contact No. : </label>
+                <label>Number: </label>
                 <input type='text' onChange={(e)=>{setData({...data,number:e.target.value})}} name="number" value={data.number} placeholder='number' /> 
               </h2>
               <h2>
                 <label>Note : </label>
                 <input type='textarea' onChange={(e)=>{setData({...data,note:e.target.value})}} name="note" value={data.note}  placeholder='write as your enquiry' />
               </h2>
-              <button type='submit'> Submit</button>
+              <a href='#'><button type='submit' className='btn' >Submit</button></a>
             </form>
           </div>
 
